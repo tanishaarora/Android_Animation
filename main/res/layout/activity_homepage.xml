@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Animation.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.Animation.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@+id/toolbar">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <!--To start the blink animation of the image-->
+            <Button
+                android:id="@+id/BTNblink"
+                style="@style/TextAppearance.AppCompat.Widget.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:text="@string/blink"
+                android:textColor="@color/white" />
+
+            <!--To start the rotate animation of the image-->
+            <Button
+                android:id="@+id/BTNrotate"
+                style="@style/TextAppearance.AppCompat.Widget.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:text="@string/clockwise"
+                android:textColor="@color/white" />
+
+            <!--To start the fading animation of the image-->
+            <Button
+                android:id="@+id/BTNfade"
+                style="@style/TextAppearance.AppCompat.Widget.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:text="@string/fade"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear1"
+            android:layout_marginTop="30dp"
+            android:orientation="horizontal"
+            android:weightSum="3">
+
+            <!--To start the move animation of the image-->
+            <Button
+                android:id="@+id/BTNmove"
+                style="@style/TextAppearance.AppCompat.Widget.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:text="@string/move"
+                android:textColor="@color/white" />
+
+            <!--To start the slide animation of the image-->
+            <Button
+                android:id="@+id/BTNslide"
+                style="@style/TextAppearance.AppCompat.Widget.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:text="@string/slide"
+                android:textColor="@color/white" />
+
+            <!--To start the zoom animation of the image-->
+            <Button
+                android:id="@+id/BTNzoom"
+                style="@style/TextAppearance.AppCompat.Widget.Button"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:padding="3dp"
+                android:text="@string/zoom"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <!--To stop the animation of the image-->
+        <Button
+            android:id="@+id/BTNstop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/linear2"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginRight="30dp"
+            android:text="@string/stop_animation" />
+
+    </RelativeLayout>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@android:drawable/ic_dialog_email" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
